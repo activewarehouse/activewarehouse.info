@@ -1,8 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
-require 'redis'
-require 'json'
-require 'open-uri'
 
 class Project
   attr_accessor :name, :latest_version, :published_at, :summary
