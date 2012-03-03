@@ -1,0 +1,60 @@
+<div class='intro row'>
+  <div class='span6 offset3 header'>
+    <h1>ActiveWarehouse</h1>
+    <p>
+      Ruby projects helping you to transform your data
+    </p>
+  </div>
+</div>
+
+<div class='row span8 offset2 description'>
+  <p>
+    If you need to gather data from a system, adapt and transform it to reuse it in another app or a reporting system, you came at the right place.
+  </p>
+  <p>
+    To get started, see the <a href="http://github.com/activewarehouse-etl-sample">activewarehouse etl sample</a> which extracts, tranforms and load the Rails commit logs into a datawarehouse-like data structure.
+  </p>
+  <p>
+    Any questions? Ask the <a href="https://groups.google.com/forum/?fromgroups#!forum/activewarehouse-discuss">Google Group</a>!
+  </p>
+</div>
+
+<div class='projects row'>
+  <% @projects.each_with_index do |project, index| %>
+    <div class='span6 offset3 section'>
+      <% if index == 0 %>
+      <% elsif index == 2 %>
+        <p>The following projects are not up to date (but people use github forks in production):</p>
+      <% end %>
+    </div>
+
+    <div class='project span6 offset3'>
+      <h3><%= project.name %></h3>
+      <p class='summary'>
+        <%= project.summary %>
+      </p>
+
+      GitHub project:
+      <a href="http://github.com/activewarehouse/<%= project.name %>">GitHub</a>
+      <br/>
+
+      Latest release: 
+      <a href="https://rubygems.org/gems/<%= project.name %>/versions/<%= project.latest_version %>">
+        <%= project.latest_version %>
+        <%= project.published_at.strftime("%B %d, %Y") %>
+      </a>
+
+      <br/>
+
+      <div class='status'>
+        <a href="http://travis-ci.org/activewarehouse/<%= project.name %>"><img src="https://secure.travis-ci.org/activewarehouse/<%= project.name %>.png?branch=master" alt="Build Status" ></img></a>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class='row'>
+  <footer class='span8 offset2'>
+    ActiveWarehouse is currently maintained by <a href="http://twitter.com/thibaut_barrere">Thibaut Barrère</a>.
+  </footer>
+</div>

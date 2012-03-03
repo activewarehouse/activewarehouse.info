@@ -1,0 +1,71 @@
+body {
+  background-color: #eee;
+}
+
+.container {
+  background-color: white;
+}
+
+p {
+  font-size: 16px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.header {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2em;
+}
+
+.intro h1 {
+  font-size: 3.5em;
+  margin-top: 2em;
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+
+.project {
+  background-color: #eee;
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.project h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.2em;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 4em;
+  text-align: center;
+}
+
+.status {
+  margin-top: 0.3em;
+}
+
+.section {
+  margin-top: 1.5em;
+  font-weight: normal;
+  color: #999;
+}
+
+.section p {
+  font-size: 12px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.summary {
+  font-size: 15px;
+}
